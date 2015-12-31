@@ -1,0 +1,6 @@
+D:\Nabeel Workspace\Practice\Console\AdjacentCellsInMatrix\AdjacentCellsInMatrix\bin\Debug\AdjacentCellsInMatrix.exe.config
+D:\Nabeel Workspace\Practice\Console\AdjacentCellsInMatrix\AdjacentCellsInMatrix\bin\Debug\AdjacentCellsInMatrix.exe
+D:\Nabeel Workspace\Practice\Console\AdjacentCellsInMatrix\AdjacentCellsInMatrix\bin\Debug\AdjacentCellsInMatrix.pdb
+D:\Nabeel Workspace\Practice\Console\AdjacentCellsInMatrix\AdjacentCellsInMatrix\obj\Debug\AdjacentCellsInMatrix.csprojResolveAssemblyReference.cache
+D:\Nabeel Workspace\Practice\Console\AdjacentCellsInMatrix\AdjacentCellsInMatrix\obj\Debug\AdjacentCellsInMatrix.exe
+D:\Nabeel Workspace\Practice\Console\AdjacentCellsInMatrix\AdjacentCellsInMatrix\obj\Debug\AdjacentCellsInMatrix.pdb
