@@ -1,0 +1,19 @@
+what needed to be done
+
+Logic for possible entity
+if token firsletter cap or token ending with dot
+	if firstletter cap
+
+case 1 : U.S. Open
+
+possible token 1 => U.S.
+possible token 2 => U.S. Open
+
+case 2 : U.S. Open. H.J. Heinz Company
+possible token 1 => U.S.
+possible token 2 => U.S. Open
+possible token 3 => U.S. Open H.J.
+possible token 4 => U.S. Open H.J. Heinz
+possible token 5 => U.S. Open H.J. Heinz Company
+
+All token with same Id

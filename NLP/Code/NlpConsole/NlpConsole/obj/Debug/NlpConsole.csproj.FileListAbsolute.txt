@@ -1,0 +1,7 @@
+D:\Nabeel Workspace\Practice\Console\NlpConsole\NlpConsole\bin\Debug\NlpConsole.exe.config
+D:\Nabeel Workspace\RnD\NLP\Code\NlpConsole\NlpConsole\bin\Debug\NlpConsole.exe.config
+D:\Nabeel Workspace\RnD\NLP\Code\NlpConsole\NlpConsole\obj\Debug\NlpConsole.csprojResolveAssemblyReference.cache
+D:\Nabeel Workspace\RnD\NLP\Code\NlpConsole\NlpConsole\bin\Debug\NlpConsole.exe
+D:\Nabeel Workspace\RnD\NLP\Code\NlpConsole\NlpConsole\bin\Debug\NlpConsole.pdb
+D:\Nabeel Workspace\RnD\NLP\Code\NlpConsole\NlpConsole\obj\Debug\NlpConsole.exe
+D:\Nabeel Workspace\RnD\NLP\Code\NlpConsole\NlpConsole\obj\Debug\NlpConsole.pdb
