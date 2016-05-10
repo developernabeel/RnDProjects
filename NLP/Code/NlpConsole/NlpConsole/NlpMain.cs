@@ -10,7 +10,7 @@ namespace NlpConsole
     {
         public NlpMain()
         {
-            string text = @"Another    ex-Golden Stater, Paul Stankowski from Oxnard, is contending
+            string text = @"Another    ex-  Golden Stater, Paul Stankowski from Oxnard, is contending
 for a berth on the U.S. Ryder Cup team after winning his first PGA Tour
 event last year and staying within three strokes of the lead through
 three rounds of last month's U.S. Open. H.J. Heinz Company said it

@@ -20,17 +20,16 @@ namespace NlpConsole
                 int EWD = token.IsEndingWithFullStop ? 1 : 0;
                 int PE = token.IsPossibleEntity ? 1 : 0;
 
-                //Console.WriteLine(string.Format("ID: {0}\t Value: {1}\nFirst Letter Cap: {2}\t Ending with Dot: {3}\t Possible Entity: {4}\n",
-                //    token.TokenId, token.TokenValue, FLC, EWD, PE));
+                Console.WriteLine(string.Format("ID: {0}\t Entity ID: {1}\t Value: {2}\nFirst Letter Cap: {3}\t Ending with Dot: {4}\t Possible Entity: {5}\n",
+                    token.TokenId, token.EntityId, token.TokenValue, FLC, EWD, PE));
 
-                if (token.TokenId != previousId)
-                    Console.WriteLine();
+                //if (token.TokenId != previousId)
+                //    Console.WriteLine();
 
-                Console.Write(token.TokenValue + " ");
+                //Console.Write(token.TokenValue + " ");
 
-                previousId = token.TokenId;
+                previousId = token.EntityId;
             }
-
         }
 
         public List<PossibleToken> GetPossibleTokens(string text)
@@ -41,7 +40,8 @@ namespace NlpConsole
             var tokenList = new List<PossibleToken>();
 
             string currentToken = "";
-            int tokenIndex = 0;
+            int entityId = 0;
+            int tokenId = 1;
             for (int i = 0; i < text.Length; i++)
             {
                 char currentChar = text[i];
@@ -54,6 +54,7 @@ namespace NlpConsole
 
                     PossibleToken possibleToken = new PossibleToken();
 
+                    possibleToken.TokenId = tokenId++;
                     possibleToken.TokenValue = currentToken;
                     possibleToken.IsFirstLetterCapital = char.IsUpper(possibleToken.TokenValue[0]);
 
@@ -68,9 +69,9 @@ namespace NlpConsole
                     // If both current token and previous token are possible entities, then it is a possibility
                     // that both tokens are part of the same word.
                     if (len > 0 && tokenList[len - 1].IsPossibleEntity && possibleToken.IsPossibleEntity)
-                        possibleToken.TokenId = tokenList[len - 1].TokenId;
+                        possibleToken.EntityId = tokenList[len - 1].EntityId;
                     else
-                        possibleToken.TokenId = tokenIndex++;
+                        possibleToken.EntityId = entityId++;
 
                     tokenList.Add(possibleToken);
                     currentToken = "";

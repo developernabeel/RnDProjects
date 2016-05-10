@@ -9,6 +9,7 @@ namespace NlpConsole.Model
     public class PossibleToken
     {
         public int TokenId { get; set; }
+        public int EntityId { get; set; }
         public string TokenValue { get; set; }
         public bool IsPossibleEntity { get; set; }
         public bool IsEndingWithFullStop { get; set; }
