@@ -1,0 +1,4 @@
+Steps in MDE:
+- Possible Tokenization
+- Identify parts of speech in sentence, separate unidentified entities for entity search
+- Identify entities (tag named entity)
