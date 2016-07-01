@@ -1,0 +1,12 @@
+D:\Nabeel Workspace\Projects\Mohamad\RnD\DynamoDbTutorial\DynamoDbTutorial\bin\Debug\DynamoDbTutorial.exe.config
+D:\Nabeel Workspace\Projects\Mohamad\RnD\DynamoDbTutorial\DynamoDbTutorial\bin\Debug\DynamoDbTutorial.exe
+D:\Nabeel Workspace\Projects\Mohamad\RnD\DynamoDbTutorial\DynamoDbTutorial\bin\Debug\DynamoDbTutorial.pdb
+D:\Nabeel Workspace\Projects\Mohamad\RnD\DynamoDbTutorial\DynamoDbTutorial\bin\Debug\AWSSDK.Core.dll
+D:\Nabeel Workspace\Projects\Mohamad\RnD\DynamoDbTutorial\DynamoDbTutorial\bin\Debug\AWSSDK.DynamoDBv2.dll
+D:\Nabeel Workspace\Projects\Mohamad\RnD\DynamoDbTutorial\DynamoDbTutorial\bin\Debug\AWSSDK.Core.pdb
+D:\Nabeel Workspace\Projects\Mohamad\RnD\DynamoDbTutorial\DynamoDbTutorial\bin\Debug\AWSSDK.Core.xml
+D:\Nabeel Workspace\Projects\Mohamad\RnD\DynamoDbTutorial\DynamoDbTutorial\bin\Debug\AWSSDK.DynamoDBv2.pdb
+D:\Nabeel Workspace\Projects\Mohamad\RnD\DynamoDbTutorial\DynamoDbTutorial\bin\Debug\AWSSDK.DynamoDBv2.xml
+D:\Nabeel Workspace\Projects\Mohamad\RnD\DynamoDbTutorial\DynamoDbTutorial\obj\Debug\DynamoDbTutorial.csprojResolveAssemblyReference.cache
+D:\Nabeel Workspace\Projects\Mohamad\RnD\DynamoDbTutorial\DynamoDbTutorial\obj\Debug\DynamoDbTutorial.exe
+D:\Nabeel Workspace\Projects\Mohamad\RnD\DynamoDbTutorial\DynamoDbTutorial\obj\Debug\DynamoDbTutorial.pdb
