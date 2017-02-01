@@ -10,7 +10,7 @@ namespace OopsConcepts.OpenClosedPrinciple
     /// Shape class is closed for modifications but open for extension as the Area method is implemented by the child classes below. Similarly we can add as many classes as extension
     /// as we want and the CalculateArea method will run smoothly. Which Area method to call will be decided at runtime.
     /// </summary>
-    class Shape
+    public class Shape
     {
         public virtual double Area()
         {

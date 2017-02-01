@@ -4,15 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B746E8D5-B093-4415-96E9-ACE564EB5682}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{18346EE6-E31D-4B16-92F6-0F98EBC0EA51}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OopsConcepts</RootNamespace>
-    <AssemblyName>OopsConcepts</AssemblyName>
+    <RootNamespace>CSharpAndOops</RootNamespace>
+    <AssemblyName>CSharpAndOops</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -39,8 +41,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="OpenClosedPrinciple\OpenClosedPrinciple.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CSharpConcepts\CSharpConcepts.csproj">
+      <Project>{511a5440-6089-4c39-90ec-e822cfb64f67}</Project>
+      <Name>CSharpConcepts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OopsConcepts\OopsConcepts.csproj">
+      <Project>{b746e8d5-b093-4415-96e9-ace564eb5682}</Project>
+      <Name>OopsConcepts</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
