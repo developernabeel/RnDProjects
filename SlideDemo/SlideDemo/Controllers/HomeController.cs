@@ -16,5 +16,10 @@ namespace SlideDemo.Controllers
             return View();
         }
 
+        public ActionResult Design()
+        {
+            return View();
+        }
+
     }
 }
