@@ -12,6 +12,7 @@ namespace SetTheory
         {
             //new FindSubsetByBitmask();
             //new FindSubsetByRecursion();
+            new FindSubsetByRecursion2();
         }
 
         static void Main(string[] args)

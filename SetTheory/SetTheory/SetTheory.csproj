@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="FindSubsetByBitmask.cs" />
     <Compile Include="FindSubsetByRecursion.cs" />
+    <Compile Include="FindSubsetByRecursion2.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
