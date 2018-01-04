@@ -39,7 +39,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dynamic\Dynamic.cs" />
+    <Compile Include="MethodOverloading\MethodOverloading.cs" />
     <Compile Include="OrderOfExecution\OrderOfExecution.cs" />
+    <Compile Include="OutAndRef\OutAndRef.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ValueAndReferenceTypes\ValueAndReferenceTypes.cs" />
   </ItemGroup>
