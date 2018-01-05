@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Delegates\Delegates.cs" />
     <Compile Include="Dynamic\Dynamic.cs" />
     <Compile Include="MethodOverloading\MethodOverloading.cs" />
     <Compile Include="OrderOfExecution\OrderOfExecution.cs" />
