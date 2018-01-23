@@ -1,0 +1,76 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SBIReportUtility.Web", "SBIReportUtility.Web\SBIReportUtility.Web.csproj", "{855AEF11-03D2-4695-9443-13E98FC87EBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SBIReportUtility.DataAccess", "SBIReportUtility.DataAccess\SBIReportUtility.DataAccess.csproj", "{60C0706B-7A1F-4043-B3BA-FB18EF46817D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SBIReportUtility.Common", "SBIReportUtility.Common\SBIReportUtility.Common.csproj", "{FD8D5FED-C963-4FC8-A975-11EB8B194F4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SBIReportUtility.Entities", "SBIReportUtility.Entities\SBIReportUtility.Entities.csproj", "{CFA75D16-25F4-486C-AEB8-5C224C338DD9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SBIReportUtility.BusinessLayer", "SBIReportUtility.BusinessLayer\SBIReportUtility.BusinessLayer.csproj", "{5497BF0F-1CC5-4D1A-8609-E9CA78594B9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SBIReportUtility.Test", "SBIReportUtility.Test\SBIReportUtility.Test.csproj", "{48A31A60-2911-4D71-9E77-1CE236A313A8}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://ohrms0d015:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = SBIReportUtility.BusinessLayer\\SBIReportUtility.BusinessLayer.csproj
+		SccProjectName1 = SBIReportUtility.BusinessLayer
+		SccLocalPath1 = SBIReportUtility.BusinessLayer
+		SccProjectUniqueName2 = SBIReportUtility.Common\\SBIReportUtility.Common.csproj
+		SccProjectName2 = SBIReportUtility.Common
+		SccLocalPath2 = SBIReportUtility.Common
+		SccProjectUniqueName3 = SBIReportUtility.DataAccess\\SBIReportUtility.DataAccess.csproj
+		SccProjectName3 = SBIReportUtility.DataAccess
+		SccLocalPath3 = SBIReportUtility.DataAccess
+		SccProjectUniqueName4 = SBIReportUtility.Entities\\SBIReportUtility.Entities.csproj
+		SccProjectName4 = SBIReportUtility.Entities
+		SccLocalPath4 = SBIReportUtility.Entities
+		SccProjectUniqueName5 = SBIReportUtility.Web\\SBIReportUtility.Web.csproj
+		SccProjectName5 = SBIReportUtility.Web
+		SccLocalPath5 = SBIReportUtility.Web
+		SccProjectUniqueName6 = SBIReportUtility.Test\\SBIReportUtility.Test.csproj
+		SccProjectName6 = SBIReportUtility.Test
+		SccLocalPath6 = SBIReportUtility.Test
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{855AEF11-03D2-4695-9443-13E98FC87EBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{855AEF11-03D2-4695-9443-13E98FC87EBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{855AEF11-03D2-4695-9443-13E98FC87EBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{855AEF11-03D2-4695-9443-13E98FC87EBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60C0706B-7A1F-4043-B3BA-FB18EF46817D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60C0706B-7A1F-4043-B3BA-FB18EF46817D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60C0706B-7A1F-4043-B3BA-FB18EF46817D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60C0706B-7A1F-4043-B3BA-FB18EF46817D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD8D5FED-C963-4FC8-A975-11EB8B194F4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD8D5FED-C963-4FC8-A975-11EB8B194F4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD8D5FED-C963-4FC8-A975-11EB8B194F4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD8D5FED-C963-4FC8-A975-11EB8B194F4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFA75D16-25F4-486C-AEB8-5C224C338DD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFA75D16-25F4-486C-AEB8-5C224C338DD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFA75D16-25F4-486C-AEB8-5C224C338DD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFA75D16-25F4-486C-AEB8-5C224C338DD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5497BF0F-1CC5-4D1A-8609-E9CA78594B9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5497BF0F-1CC5-4D1A-8609-E9CA78594B9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5497BF0F-1CC5-4D1A-8609-E9CA78594B9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5497BF0F-1CC5-4D1A-8609-E9CA78594B9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48A31A60-2911-4D71-9E77-1CE236A313A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48A31A60-2911-4D71-9E77-1CE236A313A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48A31A60-2911-4D71-9E77-1CE236A313A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48A31A60-2911-4D71-9E77-1CE236A313A8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

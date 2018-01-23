@@ -1,0 +1,75 @@
+﻿@model SBIReportUtility.Web.Models.Project.ConnectionViewModel
+@{
+    ViewBag.Title = "Add Edit Connection";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section ProjectMenu {
+    @{ Html.RenderPartial("~/Views/Shared/_ProjectMenu.cshtml", Model.ProjectDetails); }
+}
+
+@Html.HiddenFor(m => m.ProjectId, new { @id = "hdnProjectId" })
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">@(Model.Id > 0 ? "Edit" : "Add") Connection</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+
+@using (Html.BeginForm("AddEditProjectConnection", "Project", FormMethod.Post, new { @class = "", @id = "frmConnection" }))
+{
+    <div class="row">
+        <div class="col-lg-8">
+            @Html.AntiForgeryToken()
+
+            @Html.HiddenFor(m => m.Id)
+            @Html.HiddenFor(m => m.ProjectId)
+            <div class="form-group">
+                <label for="txtConnectionName">Connection Name<span class="text-danger"> *</span></label>
+                @Html.TextBoxFor(m => m.ConnectionName, new { @placeholder = "Connection Name", @id = "txtConnectionName", @class = "form-control", @maxlength = "50" })
+                @Html.ValidationMessageFor(m => m.ConnectionName, "", new { @class = "text-danger" })
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group">
+                <label for="txtSID">SID<span class="text-danger"> *</span></label>
+                @Html.TextBoxFor(m => m.SID, new { @placeholder = "SID", @id = "txtSID", @class = "form-control", @maxlength = "50" })
+                @Html.ValidationMessageFor(m => m.SID, "", new { @class = "text-danger" })
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group">
+                <label for="txtIpAddress">IP Address<span class="text-danger"> *</span></label>
+                @Html.TextBoxFor(m => m.IpAddress, new { @placeholder = "IP Address", @id = "txtIpAddress", @class = "form-control", @maxlength = "50" })
+                @Html.ValidationMessageFor(m => m.IpAddress, "", new { @class = "text-danger" })
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group">
+                <label for="txtPortNumber">Port Number<span class="text-danger"> *</span></label>
+                @Html.TextBoxFor(m => m.PortNumber, new { @placeholder = "Port Number", @id = "txtPortNumber", @class = "form-control", @maxlength = "50" })
+                @Html.ValidationMessageFor(m => m.PortNumber, "", new { @class = "text-danger" })
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group">
+                <label for="txtUserName">Connection Username<span class="text-danger"> *</span></label>
+                @Html.TextBoxFor(m => m.ConnectionUsername, new { @placeholder = "UserName", @id = "txtUserName", @class = "form-control", @maxlength = "50" })
+                @Html.ValidationMessageFor(m => m.ConnectionUsername, "", new { @class = "text-danger" })
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group">
+                <label for="txtPassword">Connection Password<span class="text-danger"> *</span></label>
+                @Html.PasswordFor(m => m.ConnectionPassword, new { @placeholder = "Password", @id = "txtPassword", @class = "form-control", @maxlength = "50" })
+                @Html.ValidationMessageFor(m => m.ConnectionPassword, "", new { @class = "text-danger" })
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <button type="submit" class="btn btn-success">@(Model.Id > 0 ? "Save" : "Add")</button>
+        <button type="button" class="btn btn-primary" onclick="testConnection();">Test Connection</button>
+        <a href="@Url.Action("ProjectConnections", "Project", new { projectId = Model.ProjectId })" class="btn btn-danger">Cancel</a>
+    </div>
+}
+
+@section Scripts {
+    <script src="~/Scripts/CustomJs/Project/addEditConnection.js"></script>
+}

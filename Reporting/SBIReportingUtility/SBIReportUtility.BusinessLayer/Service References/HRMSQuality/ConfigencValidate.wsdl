@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tns="urn:ValidatencuserwebserviceWsd" xmlns:p0="urn:ValidatencuserwebserviceWsd/ConfigencValidate" targetNamespace="urn:ValidatencuserwebserviceWsd" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="urn:ValidatencuserwebserviceWsd/ConfigencValidate" location="https://epqas:50101/Validatencuserwebservice/ConfigencValidate?wsdl=binding&amp;style=document" />
+  <wsdl:types />
+  <wsdl:service name="Validatencuserwebservice">
+    <wsdl:port name="ConfigencValidatePort" binding="p0:ConfigencValidateBinding">
+      <address location="https://epqas:50101/Validatencuserwebservice/ConfigencValidate?style=document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

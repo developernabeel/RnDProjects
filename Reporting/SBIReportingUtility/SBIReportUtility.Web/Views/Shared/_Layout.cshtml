@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>State Bank of India</title>
+
+    @*<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+        <link href="~/Content/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+        <link href="~/Content/metisMenu.min.css" rel="stylesheet" />
+        <link href="~/Scripts/datatables-plugins/dataTables.bootstrap.css" rel="stylesheet">
+        <link href="~/Scripts/datatables-responsive/dataTables.responsive.css" rel="stylesheet">
+        <link href="~/Content/sb-admin-2.min.css" rel="stylesheet" />
+        <link href="~/Content/style.css" rel="stylesheet" />*@
+    @Styles.Render("~/bundles/css")
+
+</head>
+<body>
+    <div id="ajax-loader" class="loader-screen" style="cursor: pointer; display: none;">
+        <div class="loader-img">
+            <img src="@Url.Content("~/content/images/icon.png")">
+            <svg class="circular" viewbox="25 25 50 50" width="50" height="50">
+                <circle class="path" cx="50" cy="50" r="10" fill="none"
+                        stroke-width="20" stroke="#000" stroke-miterlimit="10"></circle>
+            </svg>
+        </div>
+    </div>
+
+    <div id="wrapper">
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            @{ Html.RenderAction("Header", "Account"); }
+
+            <!-- Renders the side menu based on user role -->
+            @{ Html.RenderAction("SideMenu", "Account"); }
+
+            <!-- Renders the side menu for individual project -->
+            @RenderSection("ProjectMenu", false)
+
+        </nav>
+
+        <div id="page-wrapper" style="@ViewBag.PageWrapperMargin">
+            <div class="container-fluid">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+
+    <div class="alert alert-dismissable float-notification" id="statusContainer" style="display:none">
+        <span id="statusMessage" class="_statusMsgContent"></span>
+    </div>
+
+    @*<script src="~/Scripts/jquery-3.1.0.min.js"></script>
+        <script src="~/Scripts/bootstrap.min.js"></script>
+        <script src="~/Scripts/metisMenu.min.js"></script>
+        <script src="~/Scripts/sb-admin-2.min.js"></script>
+        <script src="~/Scripts/jquery.validate.min.js"></script>
+        <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+        <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+        <!-- DataTables JavaScript -->
+        <script src="~/Scripts/datatables/js/jquery.dataTables.min.js"></script>
+        <script src="~/Scripts/datatables-plugins/dataTables.bootstrap.min.js"></script>
+        <script src="~/Scripts/datatables-responsive/dataTables.responsive.js"></script>*@
+
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/appscripts")
+    @Scripts.Render("~/bundles/datatable")
+    <script src="~/Scripts/Global.js"></script>
+    @RenderSection("scripts", required: false)
+    <script>
+        var SBIReportUtility = SBIReportUtility || {};
+        SBIReportUtility.Url = (function () {
+            return {
+                // Gets application root url
+                root: '@Url.Content("~/")'
+            }
+        })();
+    </script>
+</body>
+</html>

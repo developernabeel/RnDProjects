@@ -1,0 +1,43 @@
+﻿@model SBIReportUtility.Web.Models.Project.AssignReportsViewModel
+@{
+    ViewBag.Title = "State Bank of India";
+}
+
+@section ProjectMenu {
+    @{ Html.RenderPartial("~/Views/Shared/_ProjectMenu.cshtml", Model.ProjectDetails); }
+}
+
+@Html.HiddenFor(m => m.ProjectDetails.ProjectId, new { @id = "hdnProjectId" })
+@Html.HiddenFor(m => m.Pfid, new { @id = "hdnPfid" })
+
+<div class="row">
+    <div class="col-md-4 col-md-offset-4">
+        @{ Html.RenderPartial("~/Views/Shared/_MessageNotifications.cshtml"); }
+    </div>
+</div>
+
+<div aria-labelledby="myModalLabel" id="userModal" class="modal fade" role="dialog" tabindex="-1"></div>
+
+<div class="row">
+    <div class="pull-left">
+        <h2>Assign Reports</h2>
+    </div>
+    <div>
+        <a href="@Url.Action("ProjectUsers", "Project", new { projectId = Model.ProjectDetails.ProjectId })" class="btn btn-primary btn-add">Back</a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <table class="table table-striped table-bordered table-hover" id="tbl-reports" cellspacing="0"></table>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/Scripts/CustomJs/Project/assignReports.js"></script>
+}
+
+
+

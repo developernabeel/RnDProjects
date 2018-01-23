@@ -1,0 +1,60 @@
+﻿@model SBIReportUtility.Web.Models.Report.ReportViewModel
+@{
+    Layout = null;
+}
+
+<div class="modal-dialog">
+    <div class="modal-content">
+        @using (Ajax.BeginForm("Create", "Report", new AjaxOptions { OnSuccess = "fnOnReportSuccess", HttpMethod = "POST", UpdateTargetId = "ReportResult" }, new { @class = "", @id = "frmReport" }))
+        {
+            @Html.AntiForgeryToken();
+            @Html.ValidationSummary(true);
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">@(Model.Id > 0 ? "Edit Report" : "Add Report")</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <div id="ReportResult">
+                        @Html.HiddenFor(m => m.Id)
+                    </div>
+                    <label for="inputReportName">Report Name<sup class="text-danger">*</sup></label>
+                    @Html.TextBoxFor(m => m.Name, new { @placeholder = "Name", @id = "inputReportName", @class = "form-control", @maxlength = "50", @tabindx = "1" })
+                    @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    <div class="clearfix"></div>
+                    <label for="inputDescription">Description<sup class="text-danger">*</sup></label>
+                    @Html.TextAreaFor(m => m.Description, new { @placeholder = "Description", @id = "inputDescription", @class = "form-control", @maxlength = "500", @tabindx = "2" })
+                    @Html.ValidationMessageFor(m => m.Description, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    <div class="clearfix"></div>
+                    <label for="inputProcedureName">Procedure Name<sup class="text-danger">*</sup></label>
+                    @Html.TextBoxFor(m => m.ProcedureName, new { @placeholder = "Procedure Name", @id = "inputProcedureName", @class = "form-control", @maxlength = "500", @tabindx = "3" })
+                    @Html.ValidationMessageFor(m => m.ProcedureName, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    <div class="clearfix"></div>
+                    <label for="inputProject">Project<sup class="text-danger">*</sup></label>
+                    @Html.DropDownListFor(m => m.ProjectId, Model.ProjectList, "Select", new { @class = "form-control", @id = "ddlProjects" })
+                    @Html.ValidationMessageFor(m => m.ProjectId, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    <div class="clearfix"></div>
+                    <label for="inputConnection">Connection<sup class="text-danger">*</sup></label>
+                    @Html.DropDownListFor(m => m.ConnectionId, Model.ConnectionList, "Select", new { @class = "form-control", @id = "ddlConnections" })
+                    @Html.ValidationMessageFor(m => m.ConnectionId, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal" tabindex="6">Cancel</button>
+                <button type="submit" class="btn btn-success" id="btnConfirm" tabindex="7">@(Model.Id > 0 ? "Save" : "Add")</button>
+            </div>
+        }
+    </div>
+</div>

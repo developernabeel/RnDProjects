@@ -1,0 +1,31 @@
+﻿@if (TempData["SuccessMessage"] != null && TempData["SuccessMessage"] != "")
+{
+    <div class="alert alert-success alert-dismissable float-notification dismiss-notification">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        @TempData["SuccessMessage"]
+    </div>
+}
+
+@if (TempData["InformationMessage"] != null && TempData["InformationMessage"] != "")
+{
+    <div class="alert alert-info alert-dismissable float-notification dismiss-notification">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        @TempData["InformationMessage"]
+    </div>
+}
+
+@if (TempData["WarningMessage"] != null && TempData["WarningMessage"] != "")
+{
+    <div class="alert alert-warning alert-dismissable float-notification dismiss-notification">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        @TempData["WarningMessage"]
+    </div>
+}
+
+@if (TempData["ErrorMessage"] != null && TempData["ErrorMessage"] != "")
+{
+    <div class="alert alert-danger alert-dismissable float-notification dismiss-notification">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        @TempData["ErrorMessage"]
+    </div>
+}

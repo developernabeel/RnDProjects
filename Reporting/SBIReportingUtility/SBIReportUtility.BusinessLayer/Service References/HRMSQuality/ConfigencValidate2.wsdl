@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:prt0="urn:ValidatencuserwebserviceWsd/ValidatencuserwebserviceVi" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="urn:ValidatencuserwebserviceWsd/ConfigencValidate" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="urn:ValidatencuserwebserviceWsd/ValidatencuserwebserviceVi" location="https://epqas:50101/Validatencuserwebservice/ConfigencValidate?wsdl=interface&amp;style=document" />
+  <wsdl:types />
+  <wsdl:binding name="ConfigencValidateBinding" type="prt0:ValidatencuserwebserviceVi">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Validateuser">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserDetails">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAuthentication">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" parts="parameters" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+</wsdl:definitions>

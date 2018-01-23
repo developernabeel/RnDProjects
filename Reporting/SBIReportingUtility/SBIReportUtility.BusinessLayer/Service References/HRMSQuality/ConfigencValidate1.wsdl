@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tns="urn:ValidatencuserwebserviceWsd/ValidatencuserwebserviceVi" xmlns:ns0="urn:ValidatencuserwebserviceVi" targetNamespace="urn:ValidatencuserwebserviceWsd/ValidatencuserwebserviceVi" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema xmlns:tns="urn:java/lang" elementFormDefault="qualified" targetNamespace="urn:java/lang" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:complexType name="ArrayOfString">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="String" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema xmlns:tns="urn:ValidatencuserwebserviceVi" xmlns:s0="urn:java/lang" elementFormDefault="qualified" targetNamespace="urn:ValidatencuserwebserviceVi" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="urn:java/lang" />
+      <xs:element name="Validateuser">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Uname" nillable="true" type="xs:string" />
+            <xs:element name="Password" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ValidateuserResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Response" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getUserDetails">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="UserId" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getUserDetailsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Response" nillable="true" type="s0:ArrayOfString" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getAuthentication">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="UserId" nillable="true" type="xs:string" />
+            <xs:element name="Password" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getAuthenticationResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Response" nillable="true" type="s0:ArrayOfString" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="ValidateuserIn_doc">
+    <wsdl:part name="parameters" element="ns0:Validateuser" />
+  </wsdl:message>
+  <wsdl:message name="ValidateuserOut_doc">
+    <wsdl:part name="parameters" element="ns0:ValidateuserResponse" />
+  </wsdl:message>
+  <wsdl:message name="getUserDetailsIn_doc">
+    <wsdl:part name="parameters" element="ns0:getUserDetails" />
+  </wsdl:message>
+  <wsdl:message name="getUserDetailsOut_doc">
+    <wsdl:part name="parameters" element="ns0:getUserDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAuthenticationIn_doc">
+    <wsdl:part name="parameters" element="ns0:getAuthentication" />
+  </wsdl:message>
+  <wsdl:message name="getAuthenticationOut_doc">
+    <wsdl:part name="parameters" element="ns0:getAuthenticationResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ValidatencuserwebserviceVi">
+    <wsdl:operation name="Validateuser">
+      <wsdl:input message="tns:ValidateuserIn_doc" />
+      <wsdl:output message="tns:ValidateuserOut_doc" />
+    </wsdl:operation>
+    <wsdl:operation name="getUserDetails">
+      <wsdl:input message="tns:getUserDetailsIn_doc" />
+      <wsdl:output message="tns:getUserDetailsOut_doc" />
+    </wsdl:operation>
+    <wsdl:operation name="getAuthentication">
+      <wsdl:input message="tns:getAuthenticationIn_doc" />
+      <wsdl:output message="tns:getAuthenticationOut_doc" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

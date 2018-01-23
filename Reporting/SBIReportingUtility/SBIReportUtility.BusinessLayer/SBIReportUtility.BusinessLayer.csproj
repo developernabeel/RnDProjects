@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5497BF0F-1CC5-4D1A-8609-E9CA78594B9D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SBIReportUtility.BusinessLayer</RootNamespace>
+    <AssemblyName>SBIReportUtility.BusinessLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HrmsService\HrmsProduction.cs" />
+    <Compile Include="HrmsService\HrmsQuality.cs" />
+    <Compile Include="HrmsService\IHrmsService.cs" />
+    <Compile Include="HrmsService\SapAccess.cs" />
+    <Compile Include="Implementation\AccountBL.cs" />
+    <Compile Include="BaseBL.cs" />
+    <Compile Include="Implementation\ConnectionBL.cs" />
+    <Compile Include="Implementation\ProjectBL.cs" />
+    <Compile Include="Implementation\ReportBL.cs" />
+    <Compile Include="Implementation\UserBL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\HRMSQuality\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SBIReportUtility.Common\SBIReportUtility.Common.csproj">
+      <Project>{fd8d5fed-c963-4fc8-a975-11eb8b194f4a}</Project>
+      <Name>SBIReportUtility.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SBIReportUtility.DataAccess\SBIReportUtility.DataAccess.csproj">
+      <Project>{60c0706b-7a1f-4043-b3ba-fb18ef46817d}</Project>
+      <Name>SBIReportUtility.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SBIReportUtility.Entities\SBIReportUtility.Entities.csproj">
+      <Project>{cfa75d16-25f4-486c-aeb8-5c224c338dd9}</Project>
+      <Name>SBIReportUtility.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Service References\HRMSQuality\ConfigencValidate.wsdl" />
+    <None Include="Service References\HRMSQuality\ConfigencValidate1.wsdl" />
+    <None Include="Service References\HRMSQuality\ConfigencValidate2.wsdl" />
+    <None Include="Service References\HRMSQuality\SBIReportUtility.BusinessLayer.HRMSQuality.ArrayOfString.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HRMSQuality\SBIReportUtility.BusinessLayer.HRMSQuality.getAuthenticationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HRMSQuality\SBIReportUtility.BusinessLayer.HRMSQuality.getUserDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HRMSQuality\SBIReportUtility.BusinessLayer.HRMSQuality.ValidateuserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\HRMSQuality\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\HRMSQuality\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\HRMSQuality\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\HRMSQuality\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

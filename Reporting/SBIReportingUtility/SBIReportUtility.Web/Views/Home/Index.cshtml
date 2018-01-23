@@ -1,0 +1,22 @@
+﻿@model SBIReportUtility.Entities.UserModel
+@using SBIReportUtility.Common.General;
+@{
+    ViewBag.Title = "State Bank of India";
+}
+
+<h2>Welcome @Model.Name</h2>
+
+<ul>
+    <li>
+        <a href="@Url.Action("Index", "Project")">Projects</a>
+    </li>
+    <li>
+        <a href="@Url.Action("Index", "Connection")">Connections</a>
+    </li>
+    <li>
+        <a href="@Url.Action("Index", "Report")">Reports</a>
+    </li>
+    <li>
+        <a href="@Url.Action("Index", "User")">Users</a>
+    </li>
+</ul>

@@ -1,0 +1,36 @@
+﻿@model SBIReportUtility.Web.Models.Project.ProjectViewModel
+@{
+    Layout = null;
+}
+
+<div class="modal-dialog">
+    <div class="modal-content">
+        @using (Ajax.BeginForm("Create", "Project", new AjaxOptions { OnSuccess = "fnOnProjectSuccess", HttpMethod = "POST", UpdateTargetId = "ProjectResult" }, new { @class = "", @id = "frmProject" }))
+        {
+            @Html.AntiForgeryToken();
+            @Html.ValidationSummary(true);
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">@(Model.Id > 0 ? "Edit Project" : "Add Project")</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <div id="ProjectResult">
+                        @Html.HiddenFor(m=>m.Id)
+                    </div>
+                    <label for="inputProjectName">Project Name<sup class="text-danger">*</sup></label>
+                    @Html.TextBoxFor(m => m.ProjectName, new { @placeholder = "Name", @id = "inputProjectName", @class="form-control", @maxlength="50", @tabindx="1" })
+                    @Html.ValidationMessageFor(m => m.ProjectName,"", new { @class="text-danger"})
+                    <div class="clearfix"></div>
+                    <label for="inputDescription">Description<sup class="text-danger">*</sup></label>
+                    @Html.TextAreaFor(m => m.Description, new { @placeholder = "Description", @id = "inputDescription", @class = "form-control", @maxlength = "500", @tabindx = "2" })
+                    @Html.ValidationMessageFor(m => m.Description, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal" tabindex="3">Cancel</button>
+                <button type="submit" class="btn btn-success" id="btnConfirm" tabindex="4">@(Model.Id > 0 ? "Save" : "Add")</button>
+            </div>
+        }
+    </div>
+</div>

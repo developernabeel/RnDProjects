@@ -1,0 +1,36 @@
+﻿@model List<SBIReportUtility.Web.Models.Project.DashboardViewModel>
+@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.PageWrapperMargin = "margin:0";
+}
+
+<h2>Project Dashboard</h2>
+<div class="row">
+    @if (Model.Count > 0)
+    {
+        foreach (var project in Model)
+        {
+            string adminText = project.IsProjectAdmin ? " (Admin)" : "";
+
+            <a href="@Url.Action("Details", "Project", new { projectId = project.Id})">
+                <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            @project.ProjectName @adminText
+                        </div>
+                        <div class="panel-body">
+                            <p>@project.Description</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        }
+    }
+    else
+    {
+        <div class="col-lg-12">
+            <span>There are no projects assigned to you.</span>
+        </div>
+    }
+</div>

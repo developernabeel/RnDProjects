@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6c1c491f-08a3-4d9d-8896-65ed58557a39" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://10.189.7.10:50101/Validatencuserwebservice/ConfigencValidate?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ConfigencValidate.wsdl" MetadataType="Wsdl" ID="bdd9e71d-6a45-4d9f-a4c7-ffb3558c08cd" SourceId="1" SourceUrl="https://10.189.7.10:50101/Validatencuserwebservice/ConfigencValidate?wsdl" />
+    <MetadataFile FileName="ConfigencValidate1.wsdl" MetadataType="Wsdl" ID="cdeeecff-f3a0-4b00-bfdd-d12fdb0953d5" SourceId="1" SourceUrl="https://epqas:50101/Validatencuserwebservice/ConfigencValidate?wsdl=interface&amp;style=document" />
+    <MetadataFile FileName="ConfigencValidate2.wsdl" MetadataType="Wsdl" ID="3e796b6a-2f0e-4d07-8363-23686373c978" SourceId="1" SourceUrl="https://epqas:50101/Validatencuserwebservice/ConfigencValidate?wsdl=binding&amp;style=document" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,57 @@
+﻿@model SBIReportUtility.Web.Models.User.UserViewModel
+@{
+    Layout = null;
+}
+
+<div class="modal-dialog">
+    <div class="modal-content">
+        @using (Ajax.BeginForm("Create", "User", new AjaxOptions { OnSuccess = "fnOnSuccess", HttpMethod = "POST" }, new { @class = "", @id = "frmUser" }))
+        {
+            @Html.AntiForgeryToken();
+            @Html.ValidationSummary(true);
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Add User</h4>
+            </div>
+            <div class="modal-body">
+                @Html.HiddenFor(m => m.Id)
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="txtPfid">PFID<span class="text-danger"> *</span></label>
+                        </div>
+                        <div class="col-md-8">                            
+                            @Html.TextBoxFor(m => m.Pfid, new { @placeholder = "Pfid", @id = "txtPfid", @class = "form-control", @maxlength = "50" })
+                            @Html.ValidationMessageFor(m => m.Pfid, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="col-md-4">
+                            <button type="button" id="btn-search" onclick="fnSearchUser();" class="btn btn-primary">Search</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="clearfix"></div>
+                    <label for="txtName">Name</label>
+                    @Html.TextBoxFor(m => m.Name, new { @placeholder = "Name", @id = "txtName", @class = "form-control", @readonly = "readonly" })
+                </div>
+
+                <div class="form-group">
+                    <div class="clearfix"></div>
+                    <label for="txtEmail">Email</label>
+                    @Html.TextBoxFor(m => m.Name, new { @placeholder = "Email", @id = "txtEmail", @class = "form-control", @readonly = "readonly" })
+                </div>
+
+                <div class="form-group">
+                    <div class="clearfix"></div>
+                    <label for="txtDesignation">Designation</label>
+                    @Html.TextBoxFor(m => m.Name, new { @placeholder = "Designation", @id = "txtDesignation", @class = "form-control", @readonly = "readonly" })
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal" tabindex="6">Cancel</button>
+                <button type="submit" class="btn btn-success" id="btnConfirm" tabindex="7">Add</button>
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,25 @@
+﻿@model SBIReportUtility.Entities.UserModel
+@if (Model.RoleId == (int)SBIReportUtility.Common.General.EnumHelper.Role.SuperAdmin)
+{
+    <div class="navbar-default sidebar" role="navigation">
+        <div class="sidebar-nav navbar-collapse">
+            <ul class="nav" id="side-menu">
+                <li>
+                    <a href="@Url.Action("Index","Home")"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Index","Project")"><i class="fa fa-folder fa-fw"></i> Projects</a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Index","Connection")"><i class="fa fa-database fa-fw"></i> Connections</a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Index","Report")"><i class="fa fa-file fa-fw"></i> Reports</a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Index","User")"><i class="fa fa-user fa-fw"></i> Users</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+}
